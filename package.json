@@ -14,7 +14,7 @@
 	},
 	"keywords": [
 		"cordova",
-		"lock screen, logger, citronium"
+		"lock screen", "logger", "citronium"
 	],
 	"author": "TTatarinov Citronium",
 	"license": "Apache 2.0"
