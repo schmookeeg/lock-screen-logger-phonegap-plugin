@@ -44,12 +44,16 @@ UIBackgroundTaskIdentifier bgTask;
                                  if (state == 1) {
                                      dispatch_sync(dispatch_get_main_queue(), ^{
                                          NSString *jsStatement = [NSString stringWithFormat:@"Screen.screenoff(%.0f);", [[NSDate date] timeIntervalSince1970] * 1000];
-                                         [self.webView  stringByEvaluatingJavaScriptFromString:jsStatement];
+                                         if ([self.webView isKindOfClass:[UIWebView class]]) {
+                                           [(UIWebView*)self.webView  stringByEvaluatingJavaScriptFromString:jsStatement];
+                                         }
                                      });
                                  } else {
                                      dispatch_sync(dispatch_get_main_queue(), ^{
                                          NSString *jsStatement = [NSString stringWithFormat:@"Screen.screenon(%.0f);", [[NSDate date] timeIntervalSince1970] * 1000];
-                                         [self.webView  stringByEvaluatingJavaScriptFromString:jsStatement];
+                                         if ([self.webView isKindOfClass:[UIWebView class]]) {
+                                           [(UIWebView*)self.webView  stringByEvaluatingJavaScriptFromString:jsStatement];
+                                         }
                                      });
                                  }
                                  NSLog(@"Cur state is %llu", state);
