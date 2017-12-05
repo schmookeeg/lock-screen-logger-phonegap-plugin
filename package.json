@@ -1,0 +1,21 @@
+{
+	"name": "com.citronium.lockscreenloggerplugin",
+	"version": "0.1",
+	"description": "LockScreenLoggerCDVPlugin",
+	"cordova": {
+		"id": "com.citronium.lockscreenloggerplugin",
+		"platforms": [
+			"ios"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/schmookeeg/lock-screen-logger-phonegap-plugin.git"
+	},
+	"keywords": [
+		"cordova",
+		"lock screen, logger, citronium"
+	],
+	"author": "TTatarinov Citronium",
+	"license": "Apache 2.0"
+}
